@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="src/thermostat.js"></script>
     <link rel="stylesheet" href="thermostat.css" />
     <title>THERMOSTAT BITCH</title>
   </head>
@@ -11,20 +12,19 @@
       </p>
       <div class="upperButtons">
         <div class="up down buttons">
-          <button id="raise"/>
-          <js_script_here>CURRENT TEMP</js_script_here>
-          <button id="lower"/>
+          <button id="raise" onclick="thermostat.raiseTemperature();" >^</button>
+          <script> document.write(thermostat.temperature); </script>
+          <button id="lower" onclick="thermostat.lowerTemperature();">V</button>
         </div>
       </div>
       <div class="reset button">
         <button id="reset" />
       </div>
-      <js_script_here>ENERGY SAVER BAR</js_script_here>
+      ENERGY SAVER BAR
       <div class="toggle energy saver">
         Toggle energy saver:
         <button id="toggleEnergySaver" />
       </div>
     </div>
-      <script src="src/thermostat.js"></script>
   </body>
 </html>
