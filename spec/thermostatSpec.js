@@ -9,7 +9,6 @@ describe("Thermostat", function() {
   });
 
   describe("#raiseTemperature", function() {
-
     it('raises temp by 1', function () {
       thermostat.raiseTemperature();
       expect(thermostat.temperature).toBe(21);
