@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="thermostat.css">
+    <title>THERMOSTAT BITCH</title>
+  </head>
+  <body>
+    <div class="thermostat">
+      <p>
+        THERMOSTAT
+      </p>
+      <div class="upperButtons">
+        <form class="up down buttons">
+          <input type="button" value="raise"/>
+          <js_script_here>CURRENT TEMP</js_script_here>
+          <input type="button" value="lower"/>
+        </form>
+      </div>
+      <form class="reset button">
+        <input type="button" value="reset" />
+      </form>
+      <js_script_here>ENERGY SAVER BAR</js_script_here>
+      <form class="toggle energy saver">
+        Toggle energy saver:
+        <input type="button" value="toggleEnergySaver" />
+      </form>
+    </div>
+  </body>
+</html>
+
+
+<style>
+body {
+  background-color: #0D294F;
+  justify-content: center;
+  display: inline-block;
+  font-family: 'Alfa Slab One';
+}
+
+input {
+  /*height: 100%;*/
+  /*width: 10%;*/
+  font-size: 18px;
+  background-color: #476b6b; /* Green */
+  border: 2px solid #476b6b;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+input[type="text"] {
+  /*width: 20%;*/
+  background-color: #f0f5f5;
+  color: black;
+}
+
+.thermostat {
+  background-color: beige;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  height: 700px;
+  width: 500px;
+}
+
+.upperButtons {
+  margin: 20px;
+  display: inline-block;
+  border: 2px solid #476b6b;
+  width: 300px;
+}
+
+.button {
+  width: 100%;
+}
+
+</style>
