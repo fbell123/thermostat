@@ -10,9 +10,18 @@ describe("Thermostat", function() {
 
   describe("#raiseTemperature", function() {
 
+    it('raises temp by 1', function () {
+      thermostat.raiseTemperature();
+      expect(thermostat.temperature).toBe(21);
+    });
   });
 
-  describe("#lowerTemperature", function() {
+    // expect{ function() (thermostat.raiseTemperature())}.toChange(temperature()).by(1)
 
+  describe("#lowerTemperature", function() {
+    it('descreases temp by 1', function () {
+      thermostat.lowerTemperature();
+      expect(thermostat.temperature).toBe(19);
+    });
   });
 });
