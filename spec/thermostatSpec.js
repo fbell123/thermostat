@@ -23,19 +23,27 @@ describe("Thermostat", function() {
     });
   });
 
-  describe("#minimumTemperature", function() {
+  describe("minimumTemperature", function() {
     it('has a minimum temperature of 10', function () {
       expect(thermostat.minimumTemperature).toBe(10);
     });
   });
 
-  describe("#maximumTemperature", function() {
+  describe("maximumTemperature", function() {
     it('has a max temp of 25 if in power save', function () {
       expect(thermostat.maximumTemperature).toBe(25);
     });
     it('has a max temp of 32 if not in power save', function () {
       thermostat.togglePowerSave();
       expect(thermostat.maximumTemperature).toBe(32);
+    });
+  });
+
+  describe("#resetTemperature", function() {
+    it('can be reset to default temperature', function () {
+      thermostat.raiseTemperature();
+      thermostat.resetTemperature();
+      expect(thermostat.temperature).toBe(20);
     });
   });
 });

@@ -24,4 +24,7 @@ Thermostat.prototype.togglePowerSave = function () {
   }
 }
 
+Thermostat.prototype.resetTemperature = function () {
+  this.temperature = this.defaultTemperature
+}
 var thermostat = new Thermostat();
