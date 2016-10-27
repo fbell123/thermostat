@@ -45,4 +45,26 @@ describe("Thermostat", function() {
       expect(thermostat.temperature).toBe(20);
     });
   });
+
+  describe("#energyUsage", function() {
+    it("returns 'low-usage' when less than 18", function() {
+      thermostat.lowerTemperature();
+      thermostat.lowerTemperature();
+      thermostat.lowerTemperature();
+      expect(thermostat.energyUsage()).toBe('low-usage');
+    });
+
+    it("returns 'medium-usage' when less than 25", function() {
+      expect(thermostat.energyUsage()).toBe('medium-usage');
+    });
+
+    it("returns 'high-usage' when 25", function() {
+      thermostat.raiseTemperature();
+      thermostat.raiseTemperature();
+      thermostat.raiseTemperature();
+      thermostat.raiseTemperature();
+      thermostat.raiseTemperature();
+      expect(thermostat.energyUsage()).toBe('high-usage');
+    });
+  });
 });

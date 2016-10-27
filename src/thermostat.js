@@ -22,9 +22,23 @@ Thermostat.prototype.togglePowerSave = function () {
   else {
     this.maximumTemperature = this.maxTempWithPowerSave;
   }
-}
+};
 
 Thermostat.prototype.resetTemperature = function () {
-  this.temperature = this.defaultTemperature
-}
+  this.temperature = this.defaultTemperature;
+};
+
+Thermostat.prototype.energyUsage = function () {
+  if(this.temperature < 18) {
+    return 'low-usage';
+  }
+  else if(this.temperature > 17 && this.temperature < 25) {
+    return 'medium-usage';
+  }
+  else if(this.temperature > 24) {
+    return 'high-usage';
+  }
+};
+
+
 var thermostat = new Thermostat();
