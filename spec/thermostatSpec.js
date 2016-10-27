@@ -5,6 +5,14 @@ describe("Thermostat", function() {
   });
 
   it("Starts at 20 degrees", function() {
-    expect(thermostat.temperature).toBe(20);
+    expect(thermostat.defaultTemperature).toBe(20);
+  });
+
+  describe("#raiseTemperature", function() {
+
+  });
+
+  describe("#lowerTemperature", function() {
+
   });
 });
