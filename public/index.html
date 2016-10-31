@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="thermostat.css" />
-    <title>THERMOSTAT BITCH</title>
-  </head>
-  <body>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script src="src/thermostat.js"></script>
-    <div class="thermostat">
-      <p>
-        THERMOSTAT
-      </p>
-      <div class="upperButtons">
-        <div class="up down buttons">
-          <button id="raise" onclick="thermostat.raiseTemperature();" >^</button>
-          <script> document.write(thermostat.temperature); </script>
-          <button id="lower" onclick="thermostat.lowerTemperature();">V</button>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="js/interface.js"></script>
+  <script src="src/thermostat.js"></script>
+  <link rel="stylesheet" href="thermostat.css" />
+  <title>THERMOSTAT BITCH</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      THERMOSTAT
+    </h1>
+    <div class="de">
+      <div class="den" >
+        <div class="dene">
+          <div class="denem" id="bar">
+            <div>
+              <button id="toggleEnergySaver"/>POWER SAVE</button>
+            </div>
+            <div class="resetbutton">
+              <button id="reset" />RESET</button>
+            </div>
+            <div class="upperButtons">
+              <button id="raise" onclick="thermostat.raiseTemperature();" >Raise</button>
+            </div>
+            <div class="lowerButtons">
+              <button id="lower" onclick="thermostat.lowerTemperature();">Lower</button>
+            </div>
+            <div class="deneme">
+              <!-- shows temperature -->
+            </div>
+          </div>
         </div>
       </div>
-      <div class="reset button">
-        <button id="reset" />
-      </div>
-      ENERGY SAVER BAR
-      <div class="toggle energy saver">
-        Toggle energy saver:
-        <button id="toggleEnergySaver" />
-      </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
+
+<!--
+
+-->

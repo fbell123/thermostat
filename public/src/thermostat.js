@@ -8,11 +8,21 @@ function Thermostat() {
 }
 
 Thermostat.prototype.raiseTemperature = function () {
-  this.temperature += 1;
+  if (this.temperature >= this.maximumTemperature) {
+    this.temperature = this.maximumTemperature;
+    'Max temperature reached';
+  } else {
+    this.temperature += 1;
+  };
 };
 
 Thermostat.prototype.lowerTemperature = function () {
-  this.temperature -= 1;
+  if (this.temperature <= this.minimumTemperature) {
+    this.temperature = this.minimumTemperature;
+    'Minimum temperature reached';
+  } else {
+    this.temperature -= 1;
+  };
 };
 
 Thermostat.prototype.togglePowerSave = function () {
@@ -21,7 +31,7 @@ Thermostat.prototype.togglePowerSave = function () {
   }
   else {
     this.maximumTemperature = this.maxTempWithPowerSave;
-  }
+  };
 };
 
 Thermostat.prototype.resetTemperature = function () {
